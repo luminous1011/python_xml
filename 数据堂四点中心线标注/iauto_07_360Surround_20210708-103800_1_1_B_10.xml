@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<annotations>
+  <meta>
+    <name>iauto_07_360Surround_20210708-103800_1_1_B_10.jpg</name>
+    <width>1280</width>
+    <height>960</height>
+    <timeofday>undefined</timeofday>
+    <weather>undefined</weather>
+    <scene>underground_parking</scene>
+  </meta>
+  <polygon label="ps_box" occluded="0" points="126.72077922077918,583.5064935064936;332.62987012987014,456.23376623376623;218.9935064935065,448.0519480519481;108.99350649350649,510.32467532467535">
+    <attribute name="clarity">100</attribute>
+    <attribute name="doubleline">no</attribute>
+    <attribute name="first_point_type">T</attribute>
+    <attribute name="fourth_point_pos">normal_point</attribute>
+    <attribute name="ground_type">rubber</attribute>
+    <attribute name="heading">face_entrance</attribute>
+    <attribute name="is_overlap">no</attribute>
+    <attribute name="line_color">yellow</attribute>
+    <attribute name="line_type">solid</attribute>
+    <attribute name="occupation">no</attribute>
+    <attribute name="reflective">yes</attribute>
+    <attribute name="second_point_type">T</attribute>
+    <attribute name="shadow">no</attribute>
+    <attribute name="special_type">new_energy</attribute>
+    <attribute name="stagnant_water">no</attribute>
+    <attribute name="third_point_pos">normal_point</attribute>
+    <attribute name="type">perpendicular</attribute>
+  </polygon>
+</annotations>
