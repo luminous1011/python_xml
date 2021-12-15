@@ -13,28 +13,24 @@ try:
     db = pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, db=DB_NAME)
     print('数据库已建立连接...')
     cur = db.cursor()
-    cur.execute("DROP TABLE IF EXISTS main_tb")
-    cur.execute("DROP TABLE IF EXISTS sec_tb")
-    create_main_table_sql = """create table main_tb(
+    cur.execute("DROP TABLE IF EXISTS four_point_main_tb")
+    cur.execute("DROP TABLE IF EXISTS four_point_sec_tb")
+    create_main_table_sql = """create table four_point_main_tb(
 	    main_id int PRIMARY key auto_increment unique ,
-	    name varchar(255) UNIQUE NOT NULL ,
-	    width INT , 
-	    height INT ,
+	    name varchar(255)   ,
+	    width varchar(40) , 
+	    height varchar(40) ,
 	    timeofday varchar(40) ,
 	    scene varchar(40) ,
 	    weather varchar(40)
 	    ) """
-    create_second_table_sql = """create table sec_tb(
+    create_second_table_sql = """create table four_point_sec_tb(
         sec_id int auto_increment primary key ,
 	    main_mid int  ,
 	    first_point_type varchar(36),
 	    second_point_type varchar(36),
-	    third_point_type varchar(36),
-	    fourth_point_type varchar(36),
-	    fifth_point_type varchar(36),
-	    sixth_point_type varchar(36),
-	    seventh_point_type varchar(36),
-	    eighth_point_type varchar(36),
+	    third_point_pos varchar(36),
+	    fourth_point_pos varchar(36),
 	    type varchar(36),
 	    clarity varchar(36),
 	    occupation varchar(36),
@@ -60,7 +56,11 @@ try:
     for item in paths:
         if item == ".idea":
             continue
-        if item == "demo.py":
+        if item == "normal.py":
+            continue
+        if item == "fourPoint.py":
+            continue
+        if item == ".git":
             continue
         if item == 'CVAT四点内角点标注':
             continue
@@ -82,12 +82,8 @@ try:
             SECOND_TABLE_KEYS = {
                 'first_point_type': '',
                 'second_point_type': '',
-                'third_point_type': '',
-                'fourth_point_type': '',
-                'fifth_point_type': '',
-                'sixth_point_type': '',
-                'seventh_point_type': '',
-                'eighth_point_type': '',
+                'third_point_pos': '',
+                'fourth_point_pos': '',
                 'type': '',
                 'clarity': '',
                 'occupation': '',
@@ -114,7 +110,8 @@ try:
                 for key in PRIMARY_TABLE_KEYS:
                     if re.match('\<' + key + '\>', lineContent):
                         value = re.findall(r">(.*)<", lineContent)[0]
-                        PRIMARY_TABLE_KEYS[key] = value
+                        if PRIMARY_TABLE_KEYS[key] == '':
+                            PRIMARY_TABLE_KEYS[key] = value
                         break
                 if re.match('<attribute', lineContent) and re.search('name', lineContent) and enterSecTable == 1:
                     value = re.findall(r">(.*?)<", lineContent)[0]
@@ -129,15 +126,12 @@ try:
                     polygonArr[index]['occluded'] = re.findall(r'occluded="(.*?)"', lineContent)[0]
                 if re.match('</polygon', lineContent):
                     cur.execute(
-                        "INSERT INTO sec_tb(main_mid, first_point_type, second_point_type, third_point_type, fourth_point_type, fifth_point_type, sixth_point_type, seventh_point_type, eighth_point_type,\
+                        "INSERT INTO four_point_sec_tb(main_mid, first_point_type, second_point_type, third_point_pos, fourth_point_pos, \
                         type, clarity, occupation, ground_type, line_type, line_color, special_type, stagnant_water, reflective, shadow, is_overlap, doubleline, heading, \
                         label, points, occluded) VALUE \
                             ('" + str(insertId) + "','" + polygonArr[index]['first_point_type'] + "','" +
-                        polygonArr[index]['second_point_type'] + "','" + polygonArr[index]['third_point_type'] + "','" \
-                        + polygonArr[index]['fourth_point_type'] + "', '" + polygonArr[index][
-                            'fifth_point_type'] + "','" + polygonArr[index]['sixth_point_type'] + "','" \
-                        + polygonArr[index]['seventh_point_type'] + "', '" + polygonArr[index][
-                            'eighth_point_type'] + "','" + polygonArr[index]['type'] + "','" \
+                        polygonArr[index]['second_point_type'] + "','" + polygonArr[index]['third_point_pos'] + "','" \
+                        + polygonArr[index]['fourth_point_pos'] + "', '"  + polygonArr[index]['type'] + "','" \
                         + polygonArr[index]['clarity'] + "', '" + polygonArr[index]['occupation'] + "','" +
                         polygonArr[index]['ground_type'] + "','" \
                         + polygonArr[index]['line_type'] + "', '" + polygonArr[index]['line_color'] + "','" +
@@ -153,8 +147,8 @@ try:
                     index += 1
                 i += 1
             cur.execute(
-                "INSERT INTO main_tb(name, width, height, weather, timeofday, scene) VALUE \
-                ('" + PRIMARY_TABLE_KEYS['name'] + "','" + PRIMARY_TABLE_KEYS['width'] + "','" + PRIMARY_TABLE_KEYS['height'] \
+                "INSERT INTO four_point_main_tb(name, width, height, weather, timeofday, scene) VALUE \
+                ('" + PRIMARY_TABLE_KEYS['name'] + "','" +PRIMARY_TABLE_KEYS['width'] + "','" + PRIMARY_TABLE_KEYS['height'] \
                 + "','" +PRIMARY_TABLE_KEYS['weather'] + "', '" + PRIMARY_TABLE_KEYS['timeofday'] + "','" + PRIMARY_TABLE_KEYS['scene'] + "')")
 
     # print("INSERT INTO demo_tb(name) VALUE ('"+str(PRIMARY_TABLE_KEYS['name'])+"')")
