@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>12432</id>
+      <name>APA_iauto_08_360Surround_20211202-034143_1_3</name>
+      <size>2</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2021-12-03 09:48:04.337196+00:00</created>
+      <updated>2021-12-04 09:05:50.288361+00:00</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>0</stop_frame>
+      <frame_filter>step=1</frame_filter>
+      <z_order>False</z_order>
+      <labels>
+        <label>
+          <name>ps_box</name>
+          <attributes>
+            <attribute>
+              <name>heading</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>face_entrance
+against_entrance</values>
+            </attribute>
+            <attribute>
+              <name>shadow</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>no
+yes</values>
+            </attribute>
+            <attribute>
+              <name>reflective</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>no
+yes</values>
+            </attribute>
+            <attribute>
+              <name>stagnant_water</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>no
+yes</values>
+            </attribute>
+            <attribute>
+              <name>special_type</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>normal
+taxi
+school_bus
+bus
+ambulance
+fire_truck
+disabled_parking
+new_energy
+prohibit</values>
+            </attribute>
+            <attribute>
+              <name>line_color</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>white
+yellow
+blue</values>
+            </attribute>
+            <attribute>
+              <name>line_type</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>solid
+dashed</values>
+            </attribute>
+            <attribute>
+              <name>ground_type</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>asphalt
+cement
+hollow_brick
+brick
+rubber</values>
+            </attribute>
+            <attribute>
+              <name>occupation</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>no
+yes</values>
+            </attribute>
+            <attribute>
+              <name>clarity</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>100
+50
+30</values>
+            </attribute>
+            <attribute>
+              <name>type</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>horizontal
+perpendicular
+slanted
+slanted_h</values>
+            </attribute>
+            <attribute>
+              <name>fourth_point_pos</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>normal_point
+line_point
+padding_point</values>
+            </attribute>
+            <attribute>
+              <name>third_point_pos</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>normal_point
+line_point
+padding_point</values>
+            </attribute>
+            <attribute>
+              <name>second_point_type</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>T
+L
+ST
+SL
+U
+V</values>
+            </attribute>
+            <attribute>
+              <name>first_point_type</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>T
+L
+ST
+SL
+U
+V</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>ps_point</name>
+          <attributes>
+            <attribute>
+              <name>point</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value></default_value>
+              <values>T
+L
+ST
+SL
+U
+V</values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+      <segments>
+        <segment>
+          <id>11732</id>
+          <start>0</start>
+          <stop>1</stop>
+          <url>http://192.168.3.124:8080/?id=11732</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>cvat</username>
+        <email></email>
+      </owner>
+      <assignee></assignee>
+    </task>
+    <dumped>2021-12-06 03:45:45.371626+00:00</dumped>
+  </meta>
+  <image id="0" name="iauto_08_360Surround_20211202-034143_1_3_R_4090.jpg" width="1280" height="960">
+    <polygon label="ps_box" occluded="0" points="604.60,314.40;928.40,485.80;937.40,416.00;633.95,287.89">
+      <attribute name="first_point_type">T</attribute>
+      <attribute name="heading">face_entrance</attribute>
+      <attribute name="shadow">no</attribute>
+      <attribute name="reflective">no</attribute>
+      <attribute name="stagnant_water">no</attribute>
+      <attribute name="special_type">normal</attribute>
+      <attribute name="line_color">white</attribute>
+      <attribute name="line_type">solid</attribute>
+      <attribute name="ground_type">rubber</attribute>
+      <attribute name="occupation">yes</attribute>
+      <attribute name="clarity">30</attribute>
+      <attribute name="type">perpendicular</attribute>
+      <attribute name="fourth_point_pos">line_point</attribute>
+      <attribute name="third_point_pos">line_point</attribute>
+      <attribute name="second_point_type">L</attribute>
+    </polygon>
+  </image>
+  <image id="1" name="iauto_08_360Surround_20211202-034143_1_3_R_4110.jpg" width="1280" height="960">
+    <polygon label="ps_box" occluded="0" points="638.80,353.80;997.20,505.20;987.30,449.00;660.30,318.00">
+      <attribute name="heading">face_entrance</attribute>
+      <attribute name="shadow">no</attribute>
+      <attribute name="reflective">no</attribute>
+      <attribute name="stagnant_water">no</attribute>
+      <attribute name="special_type">normal</attribute>
+      <attribute name="line_color">white</attribute>
+      <attribute name="line_type">solid</attribute>
+      <attribute name="ground_type">rubber</attribute>
+      <attribute name="occupation">yes</attribute>
+      <attribute name="clarity">30</attribute>
+      <attribute name="type">perpendicular</attribute>
+      <attribute name="fourth_point_pos">line_point</attribute>
+      <attribute name="third_point_pos">line_point</attribute>
+      <attribute name="second_point_type">L</attribute>
+      <attribute name="first_point_type">T</attribute>
+    </polygon>
+  </image>
+</annotations>
