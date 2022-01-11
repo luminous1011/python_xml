@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<annotations>
+  <meta>
+    <name>iauto_07_360Surround_20211102-175017_1_1_L_490.jpg</name>
+    <width>1280</width>
+    <height>960</height>
+    <timeofday>night</timeofday>
+    <weather>sunny</weather>
+    <scene>city_street_parking</scene>
+  </meta>
+  <polygon label="ps_box/ps_box6" occluded="0" points="570.0090497737555,408.5339366515837;860.8888888888887,397.1111111111111;849.5555555555554,393.55555555555554;828.047619047619,386.80952380952385;588.9047619047619,395.3809523809524;574.4796380090496,404.7692307692308">
+    <attribute name="first_point_type">T</attribute>
+    <attribute name="second_point_type">T</attribute>
+    <attribute name="third_point_type"></attribute>
+    <attribute name="fourth_point_type">valid</attribute>
+    <attribute name="fifth_point_type">valid</attribute>
+    <attribute name="sixth_point_type"></attribute>
+    <attribute name="type">horizontal</attribute>
+    <attribute name="clarity">50</attribute>
+    <attribute name="occupation">yes</attribute>
+    <attribute name="ground_type">asphalt</attribute>
+    <attribute name="line_type">dashed</attribute>
+    <attribute name="line_color">white</attribute>
+    <attribute name="special_type">normal</attribute>
+    <attribute name="stagnant_water">no</attribute>
+    <attribute name="reflective">no</attribute>
+    <attribute name="shadow">no</attribute>
+    <attribute name="is_overlap">no</attribute>
+    <attribute name="doubleline">no</attribute>
+    <attribute name="heading">face_entrance</attribute>
+  </polygon>
+</annotations>

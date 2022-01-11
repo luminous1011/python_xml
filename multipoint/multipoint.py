@@ -85,7 +85,7 @@ try:
     cur.execute(create_main_table_sql)
 
     def doInsertMainTable(PRIMARY_TABLE_KEYS,polygonArr,index,filePath):
-        cur.execute("""select main_id from multipoint_main_tb where filePath = %s and name = %s and insert_batch != %s""", [filePath, PRIMARY_TABLE_KEYS['name'], str(insertBatchUuid)])
+        cur.execute("""select main_id from multipoint_main_tb where filePath = %s and name = %s and insert_batch != %s""",[filePath, PRIMARY_TABLE_KEYS['name'], str(insertBatchUuid)])
         for id in cur.fetchall():
             cur.execute(" delete from multipoint_main_tb where main_id = %s",[str(id[0])])
         cur.execute(

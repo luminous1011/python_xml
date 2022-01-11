@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<annotations>
+  <meta>
+    <name>patac_00_360Surround_20210820-130904_1_1_L_108.jpg</name>
+    <width>1280</width>
+    <height>960</height>
+    <timeofday>undefined</timeofday>
+    <weather>undefined</weather>
+    <scene>underground_parking</scene>
+  </meta>
+  <polygon label="ps_box/ps_box8" occluded="0" points="541.5,375.74999999999994;710.5,378.24999999999994;720,365.24999999999994;707,352.24999999999994;660.5,296.24999999999994;602.5,296.74999999999994;548,353.24999999999994;538.5,362.74999999999994">
+    <attribute name="first_point_type">T</attribute>
+    <attribute name="second_point_type">U</attribute>
+    <attribute name="third_point_type"></attribute>
+    <attribute name="fourth_point_type"></attribute>
+    <attribute name="fifth_point_type">invalid</attribute>
+    <attribute name="sixth_point_type">invalid</attribute>
+    <attribute name="seventh_point_type"></attribute>
+    <attribute name="eighth_point_type"></attribute>
+    <attribute name="type">perpendicular</attribute>
+    <attribute name="clarity">50</attribute>
+    <attribute name="occupation">yes</attribute>
+    <attribute name="ground_type">rubber</attribute>
+    <attribute name="line_type">solid</attribute>
+    <attribute name="line_color">white</attribute>
+    <attribute name="special_type">normal</attribute>
+    <attribute name="stagnant_water">no</attribute>
+    <attribute name="reflective">yes</attribute>
+    <attribute name="shadow">no</attribute>
+    <attribute name="is_overlap">no</attribute>
+    <attribute name="doubleline">no</attribute>
+    <attribute name="heading">face_entrance</attribute>
+  </polygon>
+  <polygon label="ps_box/ps_box8" occluded="0" points="780.6,382.09999999999997;891.8000000000001,392.5;889.1953405017922,383.27150537634407;875.584229390681,374.38261648745515;755.8,297.29999999999995;672.2,296.09999999999997;717,339.29999999999995;744.2,364.9">
+    <attribute name="first_point_type">U</attribute>
+    <attribute name="second_point_type">U</attribute>
+    <attribute name="third_point_type"></attribute>
+    <attribute name="fourth_point_type"></attribute>
+    <attribute name="fifth_point_type">invalid</attribute>
+    <attribute name="sixth_point_type">invalid</attribute>
+    <attribute name="seventh_point_type"></attribute>
+    <attribute name="eighth_point_type"></attribute>
+    <attribute name="type">perpendicular</attribute>
+    <attribute name="clarity">50</attribute>
+    <attribute name="occupation">yes</attribute>
+    <attribute name="ground_type">rubber</attribute>
+    <attribute name="line_type">solid</attribute>
+    <attribute name="line_color">white</attribute>
+    <attribute name="special_type">normal</attribute>
+    <attribute name="stagnant_water">no</attribute>
+    <attribute name="reflective">no</attribute>
+    <attribute name="shadow">no</attribute>
+    <attribute name="is_overlap">no</attribute>
+    <attribute name="doubleline">no</attribute>
+    <attribute name="heading">face_entrance</attribute>
+  </polygon>
+</annotations>
